@@ -1,0 +1,46 @@
+<!--
+ * @Author: llzq
+ * @Date: 2021-06-28 11:10:03
+ * @Email: liuzhiqiang1@jd.com
+ * @LastEditors: llzq
+ * @LastEditTime: 2021-07-06 14:27:59
+ * @Description:  头部注释
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://static.360buyimg.com/pops/xstoreom/js/resourceloader.js?v=22233&staticResourceHttps=false"></script>
+    <script src="//storage.360buyimg.com/retail-mobile/jslib/pop-design-v1/resourceloader.js?id=7"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <x-reservoir change-on-select @on-change="onChange" :value.sync="value"></x-reservoir>
+        {{value|json}}
+    </div>
+    <!-- <script src="./build/template.js"></script> -->
+    <!-- <script src="./reservoir.js"></script> -->
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return {
+                    value:[]
+                }
+            },
+            methods:{
+                onChange(value, selectedData){
+                    console.log(value, selectedData)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
